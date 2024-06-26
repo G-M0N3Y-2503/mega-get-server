@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ENV DOWNLOAD_DIR /data/
 ENV HOME /home/mega
@@ -13,7 +13,7 @@ ENV INPUT_TIMEOUT 0.0166
 ENV FILE_UPDATE_TIMEOUT 0.1
 
 ADD https://github.com/joewalnes/websocketd/releases/download/v0.4.1/websocketd-0.4.1_amd64.deb ./
-ADD https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megacmd_1.5.1-1.1_amd64.deb ./
+ADD https://mega.nz/linux/repo/xUbuntu_24.04/amd64/megacmd_1.7.0-2.1_amd64.deb ./
 
 RUN apt-get update; \
     apt-get install ./websocketd*.deb ./megacmd*.deb -y; \
